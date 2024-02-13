@@ -1,0 +1,13 @@
+.App {
+  background-color: #f0f0f0; /* off white */
+  height: 100vh;
+  padding-top: 60px; /* Adjust according to the taskbar height */
+}
+
+.job-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
