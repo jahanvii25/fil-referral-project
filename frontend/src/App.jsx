@@ -4,6 +4,8 @@ import JobDetailsCard from './JobDetailsCard';
 import './App.css';
 import ReferralForm from "./components/referral_form";
 
+import LandingPage from './pages/landingpage';
+
 function App() {
   return (
     // <div className="App">
@@ -15,7 +17,7 @@ function App() {
     //     {/* Add more JobDetailsCard components as needed */}
     //   </div>
     // </div>
-    <ReferralForm/>
+    <LandingPage />
   );
 }
 
