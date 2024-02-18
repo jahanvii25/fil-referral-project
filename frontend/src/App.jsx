@@ -1,23 +1,22 @@
 import React from 'react';
-import Taskbar from './Taskbar';
-import JobDetailsCard from './JobDetailsCard';
-import './App.css';
-import ReferralForm from "./components/referral_form";
+import {  Router,Route, Routes, BrowserRouter } from 'react-router-dom';
+
 
 import LandingPage from './pages/landingpage';
+import ReferralPage from './pages/referral_page';
 
 function App() {
   return (
-    // <div className="App">
-    //   <Taskbar />
-    //   <div className="job-details-container">
-    //     <JobDetailsCard />
-    //     <JobDetailsCard />
-    //     <JobDetailsCard />
-    //     {/* Add more JobDetailsCard components as needed */}
-    //   </div>
-    // </div>
-    <LandingPage />
+    
+      
+      <BrowserRouter>
+      <Routes>
+        <Route path="/login"  element={<LandingPage/>} />
+        <Route path="/create" element={<ReferralPage />} />
+      </Routes>
+      </BrowserRouter>
+  
+  
   );
 }
 
