@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import axios from "axios";
-// import referalImage from '../../public/referral-landing.jpeg';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function LandingPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const history = useHistory();
   const updateEmail = (event) => setEmail(event.target.value);
   const updatePassword = (event) => setPassword(event.target.value);
+  const navigate = useNavigate();
   async function login() {
     console.log(email);
     console.log(password);
-    const response = await axios.post("http://127.0.0.1:5000/login", {
+    const response = await axios.post("http://localhost:5000/login", {
       email: email,
       password: password,
     });
     console.log(response);
+    navigate('/create');
   }
   return (
     <div

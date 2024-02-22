@@ -1,22 +1,22 @@
 import React from 'react';
-import {  Router,Route, Routes, BrowserRouter } from 'react-router-dom';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import LandingPage from './pages/landingpage';
-import ReferralPage from './pages/referral_page';
+import ReferralDetails from './pages/referralPage/ReferralDetails';
+import ApplicationTracking from './pages/referralPage/ApplicationTracking';
+import ReferralForm from './pages/referralPage/ReferralForm';
+
 
 function App() {
   return (
-    
-      
-      <BrowserRouter>
+    <BrowserRouter>
       <Routes>
-        <Route path="/login"  element={<LandingPage/>} />
-        <Route path="/create" element={<ReferralPage />} />
+        <Route path="/login" element={<LandingPage />} index={true} />
+        
+        <Route path='/track' element={<ApplicationTracking />} />
+        <Route path='/form' element={<ReferralForm />} />
       </Routes>
-      </BrowserRouter>
-  
-  
+    </BrowserRouter>
   );
 }
 
