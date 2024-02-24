@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
+import JobPostings from "./jobpostings";
 // import referalImage from '../../public/referral-landing.jpeg';
 
 export default function LandingPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loginSuccess, setLoginSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const [role, setRole] = useState("");
   const updateEmail = (event) => setEmail(event.target.value);
   const updatePassword = (event) => setPassword(event.target.value);
+
   async function login() {
     console.log(email);
     console.log(password);
@@ -14,8 +19,19 @@ export default function LandingPage() {
       email: email,
       password: password,
     });
-    console.log(response);
+    console.log(response.data.login);
+    const chimu = await response.data;
+    if (!chimu.login)
+      setError("Incorrect login details");
+    else {
+      setError("");
+      setRole(chimu.role);
+    }
+    setLoginSuccess(chimu.login);
   }
+
+  if (loginSuccess)
+    return <JobPostings role={role} />
   return (
     <div
       style={{
@@ -68,6 +84,7 @@ export default function LandingPage() {
         />
         {/* <p style={{ fontSize: '30px', fontWeight: 'normal', color: 'white' }}>Password</p> */}
         <input
+          type="password"
           value={password}
           onChange={updatePassword}
           placeholder="Enter password .."
@@ -79,6 +96,7 @@ export default function LandingPage() {
         >
           Login
         </button>
+        <h5 style={{ color: 'red' }}>{error}</h5>
       </div>
     </div>
   );
