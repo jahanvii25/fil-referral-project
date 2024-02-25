@@ -12,3 +12,4 @@ VALUE ("ppriyam@gmail.com", "P@12345", "User"),
 ("kumarravi@gmail.com", "KR123456", "User");
 
 SELECT * FROM Emp_Details;
+
