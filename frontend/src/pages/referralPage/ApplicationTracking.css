@@ -1,0 +1,106 @@
+/* applicationForm.css */
+
+.container {
+    text-align: left;
+    margin-inline-start: 50px;
+      
+}
+/* Set the table width to 100%, collapse border spacing, and add basic styling */
+table {
+    width: 90%;
+    border-collapse: separate; /* Use 'separate' to apply border-spacing and border-radius */
+    border-spacing: 0; /* Removes default spacing */
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 8px; /* Apply rounded corners to the table */
+    overflow: hidden; 
+    
+}
+
+/* Style for table headers */
+th {
+    background-color: #020a13b5;
+    color: #f1eded;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid transparent;
+ /* Initial border setup for th */
+}
+
+/* The first and last th elements for rounded corners */
+th:first-child {
+    border-top-left-radius: 8px; /* Rounded corner for the first th element */
+}
+
+th:last-child {
+    border-top-right-radius: 8px; /* Rounded corner for the last th element */
+}
+
+/* Style for table cells */
+td {
+    padding: 8px;
+    border: 1px solid transparent; /* Makes cell borders transparent by default */
+}
+
+/* Hover effect for table rows */
+tr:hover td {
+    border: 1px solid #f1f5f9;
+    background-color: #f1f5f9; /* Makes cell borders visible and set to #f1f5f9 on row hover */
+}
+
+/* Additional styling for the table to enhance its appearance */
+table {
+    font-family: Arial, sans-serif;
+}
+
+tr:hover td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+/* applicationForm.css */
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    padding: 20px;
+  }
+  
+  .navbar-brand {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .logo-container {
+    display: flex;;
+    flex: 1;
+    align-items: center;
+  }
+
+  .logo{
+    font-size: 24px;
+  }
+
+  .logo-text{
+    margin-left: 8px;
+    font-size: 24px;
+  }
+
+
+  .navbar-icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 24px;
+  }
+  

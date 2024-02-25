@@ -1,0 +1,81 @@
+.form-container {
+    background-color: #f2f2f2;
+    max-width: 40%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 30px;
+    margin-inline-start: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;  
+  }
+  
+  /* referral_form.css */
+
+.form-container {
+  width: 50%; /* Set the width of each form container */
+  float: left; /* Float the form containers to the left */
+
+}
+
+.form-container:nth-child(odd) {
+  padding-right: 0px; /* Add some space between the form containers */
+  
+}
+
+
+  .form-group {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 3px;
+  }
+  
+  .btn-submit {
+    width: 40%;
+    padding: 10px;
+    background-color: #3ebe43;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .success-message {
+    margin-top: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .error-message {
+    margin-top: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .dropdown-icon{
+    padding: 20px;
+    cursor: pointer;
+    font-size: 80px;
+  }

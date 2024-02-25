@@ -8,6 +8,8 @@ CREATE TABLE Emp_Details(
     );
 INSERT INTO Emp_Details(Email, Pass, Emp_Role)
 VALUE ("ppriyam@gmail.com", "P@12345", "User"),
-("riya21@gmail.com", "R@6789", "User"),
-("admin@gmail.com", "A@2511", "Admin"),
-("kumarravi@gmail.com", "KR@123456", "User");
+("riya21@gmail.com", "R6789", "Admin"),
+("kumarravi@gmail.com", "KR123456", "User");
+
+SELECT * FROM Emp_Details;
+
